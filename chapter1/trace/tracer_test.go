@@ -18,7 +18,3 @@ func TestNew(t *testing.T) {
 		}
 	}
 }
-
-func New(w io.Writer) Tracer {
-	return &tracer{out: w}
-}

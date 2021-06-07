@@ -1,12 +1,15 @@
 package main
 
 import (
+	"os"
 	"log"
 	"flag"
 	"net/http"
 	"text/template"
 	"path/filepath"
 	"sync"
+
+	"github.com/nnaka2992/go_web_app/chapter1/trace"
 )
 
 type templateHandler struct {
@@ -26,6 +29,7 @@ func main() {
 	var addr = flag.String("addr", ":8080", "Application Port")
 	flag.Parse()
 	r := newRoom()
+	r.tracer = trace.New(os.Stdout)
 	http.Handle("/", &templateHandler{filename: "chat.html"})
 	http.Handle("/room", r)
 	log.Printf("Starting Chat Room")
