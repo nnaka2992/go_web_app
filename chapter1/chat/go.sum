@@ -3,3 +3,5 @@ github.com/gorilla/websocket v1.4.2/go.mod h1:YR8l580nyteQvAITg2hZ9XVh4b55+EU/ad
 github.com/nnaka2992/go_web_app v0.0.0-20210607132803-38ca7cb9786a h1:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
 github.com/nnaka2992/go_web_app/chapter1/trace v0.0.0-20210607132803-38ca7cb9786a h1:WUsXqXW70dmguhaQBvD7UnWZPTj9bEcU+BhFFbnAhuQ=
 github.com/nnaka2992/go_web_app/chapter1/trace v0.0.0-20210607132803-38ca7cb9786a/go.mod h1:yVcW3c7mmya+X5Yk90wEji/paFAFzQfPAVYBs4AWKC4=
+github.com/nnaka2992/go_web_app/chapter1/trace v0.0.0-20210607141447-50322d008cda h1:YEdcnowegrfBUK8Km3c02jMGLMP6dPNPrwlLVum41xk=
+github.com/nnaka2992/go_web_app/chapter1/trace v0.0.0-20210607141447-50322d008cda/go.mod h1:yVcW3c7mmya+X5Yk90wEji/paFAFzQfPAVYBs4AWKC4=

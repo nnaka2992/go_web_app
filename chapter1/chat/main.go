@@ -32,9 +32,7 @@ func main() {
 	r.tracer = trace.New(os.Stdout)
 	http.Handle("/", &templateHandler{filename: "chat.html"})
 	http.Handle("/room", r)
-	log.Printf("Starting Chat Room")
 	go r.run()
-	log.Printf("Start WebServer on Port: ", *addr)
 	if err:= http.ListenAndServe(*addr, nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
