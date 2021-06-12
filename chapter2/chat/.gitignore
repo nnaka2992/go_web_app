@@ -4,4 +4,4 @@
 *~
 
 # ignore .env file contains secrets
-/.env
+*.env
