@@ -1,0 +1,10 @@
+# Emacs
+\#*\#
+.\#*
+*~
+
+# ignore .env file contains secrets
+*.env
+
+# ignore binary file
+chat

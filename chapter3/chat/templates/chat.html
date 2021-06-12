@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <title>Chat</title>
+    <style>
+
+      input { display: block; }
+      ul    { list-style: none; }
+
+    </style>
+  </head>
+  <body>
+    <form id="chatbox">
+      {{.UserData.name}}:</br>
+      <textarea></textarea>
+      <input type="submit" value="Send" />
+    </form>
+
+    <ul id="messages"></ul>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+
+      $(function(){
+
+          var socket = null;
+          var msgBox = $("#chatbox textarea");
+          var messages = $("#messages");
+
+          $("#chatbox").submit(function(){
+
+              if (!msgBox.val()) return false;
+              if (!socket) {
+                  alert("Error: There is no socket connection.");
+                  return false;
+              }
+
+              socket.send(JSON.stringify({"Message": msgBox.val()}));
+
+              msgBox.val("");
+              return false;
+
+          });
+
+          if (!window["WebSocket"]) {
+              alert("Error: Your browser does not support web sockets.")
+          } else {
+              socket = new WebSocket("ws://{{.Host}}/room");
+              socket.onclose = function() {
+                  alert("Connection has been closed.");
+              }
+              socket.onmessage = function(e) {
+                  var msg = JSON.parse(e.data);
+                  let dateFormat = (date) => {
+                      date = new Date(Date.parse(date));
+                      let format = (val, len) => val.toString().padStart(len,"0");
+                      return format(date.getFullYear(), 4) + "/" +
+                          format(date.getMonth() + 1, 2) + "/" +
+                          format(date.getDate(), 2) + " " +
+                          format(date.getHours(), 2) + ":" +
+                          format(date.getMinutes(), 2) + ":" +
+                          format(date.getSeconds(), 2)
+                  };
+                  messages.prepend(
+                      $("<ul>").append(
+                          $("<li>").append(
+                              $("<strong>").text(msg.Name+ ": "),
+                              $("<span>").text(msg.Message),
+                          ),
+                          $("<li>").append(
+                              $("<span>").text(
+                                  dateFormat(msg.When)
+                              ),
+                          )
+                      )
+                  );
+              }
+          }
+      });
+
+    </script>
+  </body>
+</html>
