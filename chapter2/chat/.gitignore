@@ -1,0 +1,7 @@
+# Emacs
+\#*\#
+.\#*
+*~
+
+# ignore .env file contains secrets
+/.env
