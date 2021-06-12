@@ -4,12 +4,18 @@ import (
 	"github.com/gorilla/websocket"
 )
 
+// Client indicate a user current in chat
 type client struct {
+	// socket is a websocket for this client
 	socket *websocket.Conn
-	send chan []byte
+	// send is a sending message
+	send chan *message
+	// room is a chat room where user in
 	room *room
+	// userData store a data about user
+	userData map[string]interface{}
 }
-
+/*
 func (c *client) read() {
 	for {
 		if _, msg, err := c.socket.ReadMessage(); err == nil {
@@ -29,3 +35,4 @@ func (c *client) write() {
 	}
 	c.socket.Close()
 }
+*/
