@@ -50,10 +50,27 @@
               }
               socket.onmessage = function(e) {
                   var msg = JSON.parse(e.data);
+                  let dateFormat = (date) => {
+                      date = new Date(Date.parse(date));
+                      let format = (val, len) => val.toString().padStart(len,"0");
+                      return format(date.getFullYear(), 4) + "/" +
+                          format(date.getMonth() + 1, 2) + "/" +
+                          format(date.getDate(), 2) + " " +
+                          format(date.getHours(), 2) + ":" +
+                          format(date.getMinutes(), 2) + ":" +
+                          format(date.getSeconds(), 2)
+                  };
                   messages.append(
-                      $("<li>").append(
-                          $("<strong>").text(msg.Name+ ": "),
-                          $("<span>").text(msg.Message),
+                      $("<ul>").append(
+                          $("<li>").append(
+                              $("<strong>").text(msg.Name+ ": "),
+                              $("<span>").text(msg.Message),
+                          ),
+                          $("<li>").append(
+                              $("<span>").text(
+                                  dateFormat(msg.When)
+                              ),
+                          )
                       )
                   );
               }
