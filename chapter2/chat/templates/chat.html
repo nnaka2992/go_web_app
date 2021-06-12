@@ -60,7 +60,7 @@
                           format(date.getMinutes(), 2) + ":" +
                           format(date.getSeconds(), 2)
                   };
-                  messages.append(
+                  messages.prepend(
                       $("<ul>").append(
                           $("<li>").append(
                               $("<strong>").text(msg.Name+ ": "),
