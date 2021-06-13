@@ -6,7 +6,7 @@ import (
 	"log"
 	"fmt"
 
-	// "github.com/nnaka2992/go_web_app/chapter1/trace"
+
 	"github.com/stretchr/gomniauth"
 	"github.com/stretchr/objx"
 )
@@ -16,7 +16,7 @@ type authHandler struct {
 }
 
 func (h *authHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	if _, err := r.Cookie("auth"); err == http.ErrNoCookie {
+	if cookie, err := r.Cookie("auth"); err == http.ErrNoCookie || cookie.Value == "" {
 		// Not Autholized
 		w.Header().Set("Location", "/login")
 		w.WriteHeader(http.StatusTemporaryRedirect)
@@ -71,7 +71,8 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 		}
 
 		authCookieValue := objx.New(map[string]interface{} {
-			"name": user.Name()}).MustBase64()
+			"name": user.Name(),
+			"avatar_url": user.AvatarURL(),}).MustBase64()
 		http.SetCookie(w, &http.Cookie{
 			Name: "auth",
 			Value: authCookieValue,
