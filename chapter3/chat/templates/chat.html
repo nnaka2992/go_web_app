@@ -10,9 +10,9 @@
   </head>
   <body>
     <form id="chatbox">
-      {{.UserData.name}}:</br>
+      {{.UserData.name}}:  <a href="/logout">Sign out</a></br>
       <textarea></textarea>
-      <input type="submit" value="Send" /> or <a href="/logout">Sign out</a>
+      <input type="submit" value="Send" />
     </form>
 
     <ul id="messages" style="padding-left: 20;"></ul>
