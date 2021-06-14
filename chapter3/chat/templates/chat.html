@@ -85,31 +85,17 @@
                   };
 
                   messages.prepend(
-                      $("<li>").attr(
-                          "id", "messages"
-                      ).append(
-                          $("<div>").attr(
-                              "id", "message-box"
-                          ).append(
-                              $("<div>").attr(
-                                  "id", "pic"
-                              ).append(
-                                  $("<img>").attr(
-                                      "title", msg.Name
-                                  ).attr(
-                                      "src", msg.AvatarURL
-                                  )
-                              ),
-                              $("<div>").attr(
-                                  "id", "main"
-                              ).append(
+                      $("<li>").attr("id", "messages").append(
+                          $("<div>").attr("id", "message-box").append(
+                              $("<div>").attr("id", "pic").append(
+                                  $("<img>").attr("title", msg.Name)
+                                      .attr("src", msg.AvatarURL)),
+                              $("<div>").attr("id", "main").append(
                                   $("<strong>").text(msg.Name),
-                                  $("<span>").attr(
-                                      "id", "message"
-                                  ).text(msg.Message),
-                                  $("<span>").attr(
-                                      "id", "time"
-                                  ).text(dateFormat(msg.When))
+                                  $("<span>").attr("id", "message")
+                                      .text(msg.Message),
+                                  $("<span>").attr("id", "time")
+                                      .text(dateFormat(msg.When))
                               )
                           )
                       )
