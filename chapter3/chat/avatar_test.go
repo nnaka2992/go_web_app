@@ -12,9 +12,10 @@ func TestAuthAvatar(t *testing.T) {
 	}
 	// set value
 	testUrl := "http://url-to-avatar"
-	client.userData = map[string]interface{}{"avata_url": testUrl}
+	client.userData = map[string]interface{}{"avatar_url": testUrl}
+	url, err = authAvatar.GetAvatarURL(client)
 	if err != nil {
-		t.Error("when value is set, AuthAvatar.GetAvatarURL should not return error")
+		t.Error("when value is set, AuthAvatar.GetAvatarURL should not return an error")
 	} else {
 		if url != testUrl {
 			t.Error("AuthAvatar.GetAvatarURL should return correct URL")
