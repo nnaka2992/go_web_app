@@ -10,11 +10,18 @@ import (
 )
 
 type room struct {
+	// channel for sending message
 	forward chan *message
+	// joining clients
 	join chan *client
+	// leaving clients
 	leave chan *client
+	// clients currently joining
 	clients map[*client]bool
+	// tracing chaat log
 	tracer trace.Tracer
+	// avatar correct avatar information
+	avatar Avatar
 }
 
 func (r *room) run() {
@@ -75,12 +82,13 @@ func (r *room) ServeHTTP(w http.ResponseWriter, req *http.Request){
 	client.read()
 }
 
-func newRoom() *room {
+func newRoom(avatar Avatar) *room {
 	return &room {
 		forward: make(chan *message),
 		join: make(chan *client),
 		leave: make(chan *client),
 		clients: make(map[*client]bool),
 		tracer: trace.Off(),
+		avatar: avatar,
 	}
 }

@@ -16,13 +16,6 @@ import (
 	"github.com/stretchr/gomniauth/providers/facebook"
 	"github.com/stretchr/gomniauth/providers/github"
 	"github.com/stretchr/gomniauth/providers/google"
-
-	/*
-	"github.com/markbates/goth"
-	"github.com/markbates/goth/providers/facebook"
-	"github.com/markbates/goth/providers/github"
-	"github.com/markbates/goth/providers/google"
-	*/
 )
 
 type templateHandler struct {
@@ -49,8 +42,10 @@ func main() {
 	var addr = flag.String("addr", ":8080", "Application Port")
 	flag.Parse()
 
+	// read env information
 	_ = godotenv.Load("test.env")
 
+	// set keys
 	gomniauth.SetSecurityKey(os.Getenv("SECURITY_KEY"))
 	gomniauth.WithProviders(
 		facebook.New(os.Getenv("FACEBOOK_KEY"),	os.Getenv("FACEBOOK_SECRETKEY"), "http://localhost:8080/auth/callback/facebook"),
@@ -58,7 +53,7 @@ func main() {
 		google.New(os.Getenv("GOOGLE_KEY"), os.Getenv("GOOGLE_SECRETKEY"), "http://localhost:8080/auth/callback/google"),
 	)
 
-	r := newRoom()
+	r := newRoom(UserAuthAvatar)
 	r.tracer = trace.New(os.Stdout)
 
 	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
