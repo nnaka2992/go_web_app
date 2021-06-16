@@ -57,6 +57,7 @@ func main() {
 	r.tracer = trace.New(os.Stdout)
 
 	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
+	http.Handle("/upload", MustAuth(&templateHandler{filename: "upload.html"}))
 	http.Handle("/login", &templateHandler{filename: "login.html"})
 	http.HandleFunc("/auth/", loginHandler)
 	http.HandleFunc("/logout", func(w http.ResponseWriter, r *http.Request) {
@@ -69,6 +70,7 @@ func main() {
 		w.Header()["Location"] = []string{"/chat"}
 		w.WriteHeader(http.StatusTemporaryRedirect)
 	})
+	http.HandleFunc("/uploader", uploaderHandler)
 	http.Handle("/room", r)
 	go r.run()
 	if err:= http.ListenAndServe(*addr, nil); err != nil {

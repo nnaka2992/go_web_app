@@ -8,3 +8,6 @@
 
 # ignore binary file
 chat
+
+# ignroe images
+avatars/*
