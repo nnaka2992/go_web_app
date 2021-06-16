@@ -1,6 +1,10 @@
 package main
 import (
+	"fmt"
 	"testing"
+	"crypto/md5"
+	"strings"
+	"io"
 )
 
 func TestAuthAvatar(t *testing.T) {
@@ -25,8 +29,13 @@ func TestAuthAvatar(t *testing.T) {
 
 func TestGravatarAvatar(t *testing.T) {
 	var gravatarAvatar GravatarAvatar
+
+	m := md5.New()
+	io.WriteString(m, strings.ToLower("MyEmailAddress@example.com"))
 	client := new(client)
-	client.userData = map[string]interface{}{"email": "MyEmailAddress@example.com"}
+	client.userData = map[string]interface{}{
+		"userid": fmt.Sprintf("%x", m.Sum(nil)),
+	}
 	url, err := gravatarAvatar.GetAvatarURL(client)
 	if err != nil {
 		t.Error("GravatarAvatar.GetaAvatarURL should not return an error")
