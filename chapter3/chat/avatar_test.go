@@ -1,5 +1,6 @@
 package main
 import (
+	"path/filepath"
 	"fmt"
 	"testing"
 	"crypto/md5"
@@ -44,3 +45,22 @@ func TestGravatarAvatar(t *testing.T) {
 		t.Errorf("GravatarAvatar.GetAvatarURL return incorrect value %s", url)
 	}
 }
+
+func TestFileSystemAvatar(t *testing.T) {
+	// Generate test avatar image
+	filename := filepath.Join("avatars", "abc.jpg")
+	ioutils.WriteFile(filename, []byte{}, 077)
+	defer func() { os.Remove(filename) } ()
+
+	var fileSystemAvatar FileSystemAvatar
+	client := new(client)
+	client.userData = map[string]interface{} {"userid": "abc"}
+	url, err := fileSystemAvatar.GetAvatarURL(client)
+	if err != nil {
+		t.Error("FileSystemAvatar.GetAvatarURL should not return an error")
+	}
+	if url != "/avatars/abc.jpg" {
+		t.Errorf("FileSystemAvatar.GetAvatarURL returns invalid url &s", url)
+	}
+}
+
