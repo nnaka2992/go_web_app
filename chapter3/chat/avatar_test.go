@@ -1,11 +1,13 @@
 package main
 import (
+	"os"
 	"path/filepath"
 	"fmt"
 	"testing"
 	"crypto/md5"
 	"strings"
 	"io"
+	"io/ioutil"
 )
 
 func TestAuthAvatar(t *testing.T) {
