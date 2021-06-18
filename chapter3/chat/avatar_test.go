@@ -51,7 +51,7 @@ func TestGravatarAvatar(t *testing.T) {
 func TestFileSystemAvatar(t *testing.T) {
 	// Generate test avatar image
 	filename := filepath.Join("avatars", "abc.jpg")
-	ioutils.WriteFile(filename, []byte{}, 077)
+	ioutil.WriteFile(filename, []byte{}, 077)
 	defer func() { os.Remove(filename) } ()
 
 	var fileSystemAvatar FileSystemAvatar
