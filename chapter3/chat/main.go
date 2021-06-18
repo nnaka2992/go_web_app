@@ -53,7 +53,7 @@ func main() {
 		google.New(os.Getenv("GOOGLE_KEY"), os.Getenv("GOOGLE_SECRETKEY"), "http://localhost:8080/auth/callback/google"),
 	)
 
-	r := newRoom(UserGravater)
+	r := newRoom(UserFileSystemAvatar)
 	r.tracer = trace.New(os.Stdout)
 
 	http.Handle("/chat", MustAuth(&templateHandler{filename: "chat.html"}))
