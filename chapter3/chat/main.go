@@ -71,6 +71,7 @@ func main() {
 		w.WriteHeader(http.StatusTemporaryRedirect)
 	})
 	http.HandleFunc("/uploader", uploaderHandler)
+	http.Handle("/avatars/", http.StripPrefix("/avatars/", http.FileServer(http.Dir("./avatars"))))
 	http.Handle("/room", r)
 	go r.run()
 	if err:= http.ListenAndServe(*addr, nil); err != nil {
