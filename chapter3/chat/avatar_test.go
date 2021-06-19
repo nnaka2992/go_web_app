@@ -8,21 +8,26 @@ import (
 	"strings"
 	"io"
 	"io/ioutil"
+
+	gomniauthtest "github.com/stretchr/gomniauth/test"
 )
 
 func TestAuthAvatar(t *testing.T) {
 	var authAvatar AuthAvatar
-	client := new(client)
-	url, err := authAvatar.GetAvatarURL(client)
+	testUser := &gomniauthtest.TestUser{}
+	testUser.On("AvatarURL").Return("", ErrNoAvatarURL)
+	testChatUser := &chatUser{User: testUser}
+	url, err := authAvatar.GetAvatarURL(testChatUser)
 	if err != ErrNoAvatarURL {
-		t.Error("When value does not exist, AuthAvatar.GetAvatarURL returns ErrNoAvatarURL")
+		t.Error("When value does not exist, AuthAvatar.GetAvatarURL should return ErrNoAvatarURL")
 	}
-	// set value
-	testUrl := "http://url-to-avatar"
-	client.userData = map[string]interface{}{"avatar_url": testUrl}
-	url, err = authAvatar.GetAvatarURL(client)
+	testUrl := "http://url-to-avatar/"
+	testUser = &gomniauthtest.TestUser{}
+	testChatUser.User = testUser
+	testUser.On("Avatar").Return(testUrl, nil)
+	url, err = authAvatar.GetAvatarURL(testChatUser)
 	if err != nil {
-		t.Error("when value is set, AuthAvatar.GetAvatarURL should not return an error")
+		t.Error("When value exists, AuthAvatar.GetAvatarURL should not return error")
 	} else {
 		if url != testUrl {
 			t.Error("AuthAvatar.GetAvatarURL should return correct URL")
@@ -83,4 +88,5 @@ func TestFileSystemAvatarPNG(t *testing.T) {
 		t.Errorf("FileSystemAvatar.GetAvatarURL returns invalid url %s", url)
 	}
 }
+
 
