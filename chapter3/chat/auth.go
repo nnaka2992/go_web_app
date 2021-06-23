@@ -13,10 +13,6 @@ import (
 	"github.com/stretchr/objx"
 )
 
-type authHandler struct {
-	next http.Handler
-}
-
 type ChatUser interface {
 	UniqueID() string
 	AvatarURL() string
@@ -28,7 +24,11 @@ type chatUser struct {
 }
 
 func (u chatUser) UniqueID() string {
-	return u.UniqueID
+	return u.uniqueID
+}
+
+type authHandler struct {
+	next http.Handler
 }
 
 func (h *authHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
@@ -86,14 +86,18 @@ func loginHandler(w http.ResponseWriter, r *http.Request) {
 			log.Fatalln("Faled to get user: ", provider, "-", err)
 		}
 
+		chatUser := &chatUser{User: user}
 		m := md5.New()
 		io.WriteString(m, strings.ToLower(user.Name()))
-		userID := fmt.Sprintf("%x", m.Sum(nil))
+		chatUser.uniqueID = fmt.Sprintf("%x", m.Sum(nil))
+		avatarURL, err := avatars.GetAvatarURL(chatUser)
+		if err != nil {
+			log.Fatalln("GetAvatarURL Failed", "-", err)
+		}
 		authCookieValue := objx.New(map[string]interface{} {
-			"userid": userID,
+			"userid": chatUser.uniqueID,
 			"name": user.Name(),
-			"avatar_url": user.AvatarURL(),
-			"email": user.Email()}).MustBase64()
+			"avatar_url": avatarURL,}).MustBase64()
 		http.SetCookie(w, &http.Cookie{
 			Name: "auth",
 			Value: authCookieValue,

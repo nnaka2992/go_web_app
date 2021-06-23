@@ -21,7 +21,7 @@ func TestAuthAvatar(t *testing.T) {
 	testUrl := "http://url-to-avatar/"
 	testUser = &gomniauthtest.TestUser{}
 	testChatUser.User = testUser
-	testUser.On("Avatar").Return(testUrl, nil)
+	testUser.On("AvatarURL").Return(testUrl, nil)
 	url, err = authAvatar.GetAvatarURL(testChatUser)
 	if err != nil {
 		t.Error("When value exists, AuthAvatar.GetAvatarURL should not return error")

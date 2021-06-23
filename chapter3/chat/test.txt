@@ -1,0 +1,232 @@
+runtime: goroutine stack exceeds 1000000000-byte limit
+runtime: sp=0xc020260348 stack=[0xc020260000, 0xc040260000]
+fatal error: stack overflow
+
+runtime stack:
+runtime.throw(0x9a9e1a, 0xe)
+	/usr/lib/go-1.14/src/runtime/panic.go:1116 +0x72
+runtime.newstack()
+	/usr/lib/go-1.14/src/runtime/stack.go:1035 +0x6ce
+runtime.morestack()
+	/usr/lib/go-1.14/src/runtime/asm_amd64.s:449 +0x8f
+
+goroutine 21 [running]:
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:19 +0x6c fp=0xc020260358 sp=0xc020260350 pc=0x898a3c
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260398 sp=0xc020260358 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202603d8 sp=0xc020260398 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260418 sp=0xc0202603d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260458 sp=0xc020260418 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260498 sp=0xc020260458 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202604d8 sp=0xc020260498 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260518 sp=0xc0202604d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260558 sp=0xc020260518 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260598 sp=0xc020260558 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202605d8 sp=0xc020260598 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260618 sp=0xc0202605d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260658 sp=0xc020260618 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260698 sp=0xc020260658 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202606d8 sp=0xc020260698 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260718 sp=0xc0202606d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260758 sp=0xc020260718 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260798 sp=0xc020260758 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202607d8 sp=0xc020260798 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260818 sp=0xc0202607d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260858 sp=0xc020260818 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260898 sp=0xc020260858 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202608d8 sp=0xc020260898 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260918 sp=0xc0202608d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260958 sp=0xc020260918 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260998 sp=0xc020260958 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202609d8 sp=0xc020260998 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260a18 sp=0xc0202609d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260a58 sp=0xc020260a18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260a98 sp=0xc020260a58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260ad8 sp=0xc020260a98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260b18 sp=0xc020260ad8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260b58 sp=0xc020260b18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260b98 sp=0xc020260b58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260bd8 sp=0xc020260b98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260c18 sp=0xc020260bd8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260c58 sp=0xc020260c18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260c98 sp=0xc020260c58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260cd8 sp=0xc020260c98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260d18 sp=0xc020260cd8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260d58 sp=0xc020260d18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260d98 sp=0xc020260d58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260dd8 sp=0xc020260d98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260e18 sp=0xc020260dd8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260e58 sp=0xc020260e18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260e98 sp=0xc020260e58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260ed8 sp=0xc020260e98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260f18 sp=0xc020260ed8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260f58 sp=0xc020260f18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260f98 sp=0xc020260f58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020260fd8 sp=0xc020260f98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261018 sp=0xc020260fd8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261058 sp=0xc020261018 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261098 sp=0xc020261058 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202610d8 sp=0xc020261098 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261118 sp=0xc0202610d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261158 sp=0xc020261118 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261198 sp=0xc020261158 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202611d8 sp=0xc020261198 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261218 sp=0xc0202611d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261258 sp=0xc020261218 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261298 sp=0xc020261258 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202612d8 sp=0xc020261298 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261318 sp=0xc0202612d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261358 sp=0xc020261318 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261398 sp=0xc020261358 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202613d8 sp=0xc020261398 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261418 sp=0xc0202613d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261458 sp=0xc020261418 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261498 sp=0xc020261458 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202614d8 sp=0xc020261498 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261518 sp=0xc0202614d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261558 sp=0xc020261518 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261598 sp=0xc020261558 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202615d8 sp=0xc020261598 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261618 sp=0xc0202615d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261658 sp=0xc020261618 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261698 sp=0xc020261658 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202616d8 sp=0xc020261698 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261718 sp=0xc0202616d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261758 sp=0xc020261718 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261798 sp=0xc020261758 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202617d8 sp=0xc020261798 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261818 sp=0xc0202617d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261858 sp=0xc020261818 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261898 sp=0xc020261858 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202618d8 sp=0xc020261898 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261918 sp=0xc0202618d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261958 sp=0xc020261918 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261998 sp=0xc020261958 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc0202619d8 sp=0xc020261998 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261a18 sp=0xc0202619d8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261a58 sp=0xc020261a18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261a98 sp=0xc020261a58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261ad8 sp=0xc020261a98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261b18 sp=0xc020261ad8 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261b58 sp=0xc020261b18 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261b98 sp=0xc020261b58 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261bd8 sp=0xc020261b98 pc=0x898a19
+chat.chatUser.UniqueID(0x0, 0x0, 0x9a2cdd, 0x3, 0x0, 0x0)
+	/home/nnaka2992/Dev/docker/go_web_app/dockerfile/server/app/chapter3/chat/avatar.go:20 +0x49 fp=0xc020261c18 sp=0xc020261bd8 pc=0x898a19
+...additional frames elided...
+created by testing.(*T).Run
+	/usr/lib/go-1.14/src/testing/testing.go:1090 +0x372
+
+goroutine 1 [chan receive]:
+testing.(*T).Run(0xc00014f320, 0x9abece, 0x12, 0x9c90c8, 0x48b001)
+	/usr/lib/go-1.14/src/testing/testing.go:1091 +0x399
+testing.runTests.func1(0xc00014f0e0)
+	/usr/lib/go-1.14/src/testing/testing.go:1334 +0x78
+testing.tRunner(0xc00014f0e0, 0xc00009fe10)
+	/usr/lib/go-1.14/src/testing/testing.go:1039 +0xdc
+testing.runTests(0xc00012adc0, 0xddfea0, 0x3, 0x3, 0x0)
+	/usr/lib/go-1.14/src/testing/testing.go:1332 +0x2a7
+testing.(*M).Run(0xc00017e100, 0x0)
+	/usr/lib/go-1.14/src/testing/testing.go:1249 +0x1b7
+main.main()
+	_testmain.go:48 +0x135
+exit status 2
+FAIL	chat	49.043s

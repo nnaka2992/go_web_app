@@ -18,6 +18,12 @@ import (
 	"github.com/stretchr/gomniauth/providers/google"
 )
 
+var avatars Avatar = TryAvatars{
+	UserFileSystemAvatar,
+	UserGravater,
+	UserAuthAvatar,
+}
+
 type templateHandler struct {
 	once     sync.Once
 	filename string

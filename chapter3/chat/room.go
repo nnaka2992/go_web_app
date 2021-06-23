@@ -20,8 +20,6 @@ type room struct {
 	clients map[*client]bool
 	// tracing chaat log
 	tracer trace.Tracer
-	// avatar correct avatar information
-	avatar Avatar
 }
 
 func (r *room) run() {
@@ -89,6 +87,5 @@ func newRoom(avatar Avatar) *room {
 		leave: make(chan *client),
 		clients: make(map[*client]bool),
 		tracer: trace.Off(),
-		avatar: avatar,
 	}
 }
