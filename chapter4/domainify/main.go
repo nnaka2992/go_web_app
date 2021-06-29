@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"math/rand"
 	"os"
@@ -10,10 +11,16 @@ import (
 	"unicode"
 )
 
-var tlds = []string{"com","net"}
 const allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
 
 func main() {
+	var tldsFlag string
+	var tlds = []string{}
+	flag.StringVar(&tldsFlag, "tld", "com,net", "Top Level Domains")
+	flag.Parse()
+	for _, str := range strings.Split(tldsFlag, ",") {
+		tlds = append(tlds, str)
+	}
 	rand.Seed(time.Now().UTC().UnixNano())
 	s := bufio.NewScanner(os.Stdin)
 
