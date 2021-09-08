@@ -1,0 +1,45 @@
+version: "3.3"
+services:
+  twittervotes:
+    image: golang:1.16.0
+    command: ./twittervotes
+    environment:
+     - DEBIAN_FRONTEND=nonintercative
+     - GO111MODULE=on
+    volumes:
+     - type: volume
+       source: ./twittervotes
+       target: /go/src/twittervotes
+    working_dir: /go/src/twittervotes
+  counter:
+    image: golang:1.16.0
+    command: /bin/bash
+    environment:
+     - DEBIAN_FRONTEND=nonintercative
+     - GO111MODULE=on
+    volumes:
+     - type: volume
+       source: ./counter
+       target: /go/src/counter
+    working_dir: /go/src/counter
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+     MONGO_INIT_ROOT_USERNAME: root
+     MONGO_INIT_ROOT_PASSWORD: example
+    ports:
+     - "27017"
+  nsqlookupd:
+    image: nsqio/nsq
+    command: /nsqlookupd
+    ports:
+     - "4160"
+  nsqd:
+    image: nsqio/nsq
+    command: sh -c "/nsqd --lookupd-tcp-address=nsqlookupd:4160 && --broadcast-address=nsqlookupd"
+    depends_on:
+     - nsqlookupd
+    ports:
+     - "4150"
+     - "4151"
