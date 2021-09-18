@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+  <head>
+    <title>Create Poll</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-md-4"></div>
+      <form id="poll" role="form" class="col-md-4">
+        <h2>Create Poll</h2>
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Title">
+        <div class="form-group">
+          <label for="title">Options</label>
+          <input type="text" class="form-control" id="options" placeholder="Options">
+          <p class="help-block">Comma(,) Separated</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button> Or <a href="/">Cancel</a>
+      </form>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+     $(function() {
+       var form = $("form#poll");
+       form.submit(function(e) {
+         e.preventDefault();
+         var title = form.find("input[id='title']").val();
+         var options = form.find("input[id='options']").val();
+         options = options.split(",");
+         for (var opt in options) {
+           options[opt] = options[opt].trim();
+         }
+         $.post("http://localhost:8080/polls/?key=abc123",
+                JSON.stringify({
+                  title: title, options: options
+                })
+         ).done(function(d, s, r){
+           location.href = "view.html?poll=" + r.getResponseHeader("Location");
+         });
+       });
+     });
+    </script>
+  </body>
+</html>
