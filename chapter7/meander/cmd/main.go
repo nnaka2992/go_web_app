@@ -27,7 +27,8 @@ func main() {
 	}
 
 	runtime.GOMAXPROCS(runtime.NumCPU())
-	meander.APIKey = env["key"]
+	meander.APIKey = env["place_key"]
+	meander.MapAPIKey = env["map_key"]
 	http.HandleFunc("/journeys", cors(func(w http.ResponseWriter, r *http.Request) {
 		respond(w, r, meander.Journeys)
 	}))
@@ -42,6 +43,14 @@ func main() {
 		places := q.Run()
 		respond(w, r, places)
 
+	}))
+	http.HandleFunc("/location", cors(func(w http.ResponseWriter, r *http.Request) {
+		q := &meander.MapQuery{
+			Address: r.URL.Query().Get("address"),
+		}
+
+		location := q.Run()
+		respond(w, r, location)
 	}))
 	http.ListenAndServe(":8080", http.DefaultServeMux)
 }
