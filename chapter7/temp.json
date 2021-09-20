@@ -1,0 +1,275 @@
+{
+   "results" : [
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 51.5073915,
+               "lng" : -0.1409041
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 51.5088151802915,
+                  "lng" : -0.139635169708498
+               },
+               "southwest" : {
+                  "lat" : 51.5061172197085,
+                  "lng" : -0.142333130291502
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "icon_background_color" : "#FF9E67",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+         "name" : "The Wolseley",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 919,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110764854880976542215\"\u003eThe Wolseley\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBA5WZoLv46oitlG_kx7t0oxln3JxlHUPKKgkCJRSb9PeuezbyMtEKZ7fo5xStdcDAfvzCZiJfnFQJC_qikpdVRgcw5GA-hin2ImDxUiHxcXm1gfy_P5wZq7JX4qgrvq04irtiEKVHKEzMdvMcPrSe9IFEG03BmVOID5fd2xvY_9qgg",
+               "width" : 1379
+            }
+         ],
+         "place_id" : "ChIJr_4cVy8FdkgRIrNbO93eUFM",
+         "plus_code" : {
+            "compound_code" : "GV45+XJ イギリス ロンドン",
+            "global_code" : "9C3XGV45+XJ"
+         },
+         "price_level" : 3,
+         "rating" : 4.5,
+         "reference" : "ChIJr_4cVy8FdkgRIrNbO93eUFM",
+         "scope" : "GOOGLE",
+         "types" : [ "cafe", "restaurant", "food", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 4089,
+         "vicinity" : "160 Piccadilly, London"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 51.5139794,
+               "lng" : -0.1309288
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 51.51532838029151,
+                  "lng" : -0.129579819708498
+               },
+               "southwest" : {
+                  "lat" : 51.51263041970851,
+                  "lng" : -0.132277780291502
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "icon_background_color" : "#FF9E67",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+         "name" : "L'Escargot Restaurant",
+         "opening_hours" : {
+            "open_now" : false
+         },
+         "photos" : [
+            {
+               "height" : 3174,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/110563082104763737981\"\u003eL&#39;Escargot Restaurant\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBNTDZMw3fQVoajWoxDVrp6_9ZoNk-TDPiavVJ5u3tvNotJiYDsOjYqZ9yIzj1j_1iFxhs8Nl2djjLAE7FGtCQ9pY8X7kZs_fXo9iK3AfL8D_fnzCOKFR12G7dhp8syyVIeqfVXRTci6SISPVlHlcQNSq1nD48He-YsZNHG5RRTPICn",
+               "width" : 3610
+            }
+         ],
+         "place_id" : "ChIJv2nJxtIEdkgR5BVDRcOlpog",
+         "plus_code" : {
+            "compound_code" : "GV79+HJ イギリス ロンドン",
+            "global_code" : "9C3XGV79+HJ"
+         },
+         "price_level" : 3,
+         "rating" : 4.5,
+         "reference" : "ChIJv2nJxtIEdkgR5BVDRcOlpog",
+         "scope" : "GOOGLE",
+         "types" : [
+            "cafe",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total" : 618,
+         "vicinity" : "48 Greek Street, London"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 51.5128184,
+               "lng" : -0.1280066
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 51.5141813302915,
+                  "lng" : -0.126601919708498
+               },
+               "southwest" : {
+                  "lat" : 51.51148336970851,
+                  "lng" : -0.129299880291502
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+         "icon_background_color" : "#FF9E67",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+         "name" : "ジ・アイヴィー",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3280,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/101548693863499131148\"\u003eThe Ivy\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEC0ov2gyAsylrhZQavAqFeDqTCccoJ_x34CXbP4oo5O9tFI5WET-tXpH5ZEXq5EYPZtkojmfhhtycmBkbNj_OMvVHbP5sJ0fx6I_Nn8zemZqEa15PG_l0cNiZhmm8kQt_bhzK8nKuI3sJX50Tc6i2Q0In45iaLuml1ntyaKqZQLDlOe",
+               "width" : 4928
+            }
+         ],
+         "place_id" : "ChIJVcvKc80EdkgRyV3q0YIzDvc",
+         "plus_code" : {
+            "compound_code" : "GV7C+4Q イギリス ロンドン",
+            "global_code" : "9C3XGV7C+4Q"
+         },
+         "price_level" : 3,
+         "rating" : 4.5,
+         "reference" : "ChIJVcvKc80EdkgRyV3q0YIzDvc",
+         "scope" : "GOOGLE",
+         "types" : [
+            "cafe",
+            "bar",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "establishment"
+         ],
+         "user_ratings_total" : 2079,
+         "vicinity" : "1-5 West Street, London"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 51.5217128,
+               "lng" : -0.1342297
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 51.5230980802915,
+                  "lng" : -0.132917019708498
+               },
+               "southwest" : {
+                  "lat" : 51.5204001197085,
+                  "lng" : -0.1356149802915021
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+         "icon_background_color" : "#4B96F3",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+         "name" : "Planet Organic - Torrington Place",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3264,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114075222788844582765\"\u003eDavid Wright\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEAJhbHP25_nZxi_bFggLWcWIKq0FpUwwMxuicyOCSABUW5m-hqaZGD6gFbNXHmqe9CpUxh57RHkPpNoSfG1YSExDKEKzlSjSldoOvAGzQNcf9o3fn3fOsOm1OPe1gbxemBAZyzqFfrpodGXz8fwwqNVKao5leZK0dH6Lq4QPN73KalP",
+               "width" : 2448
+            }
+         ],
+         "place_id" : "ChIJEyH1xi4bdkgRaWRTj3m_vrw",
+         "plus_code" : {
+            "compound_code" : "GVC8+M8 イギリス ロンドン",
+            "global_code" : "9C3XGVC8+M8"
+         },
+         "price_level" : 3,
+         "rating" : 4.1,
+         "reference" : "ChIJEyH1xi4bdkgRaWRTj3m_vrw",
+         "scope" : "GOOGLE",
+         "types" : [
+            "supermarket",
+            "grocery_or_supermarket",
+            "cafe",
+            "food",
+            "health",
+            "point_of_interest",
+            "store",
+            "establishment"
+         ],
+         "user_ratings_total" : 250,
+         "vicinity" : "22 Torrington Place, London"
+      },
+      {
+         "business_status" : "OPERATIONAL",
+         "geometry" : {
+            "location" : {
+               "lat" : 51.519876,
+               "lng" : -0.152246
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 51.52119988029149,
+                  "lng" : -0.150900769708498
+               },
+               "southwest" : {
+                  "lat" : 51.51850191970849,
+                  "lng" : -0.153598730291502
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+         "icon_background_color" : "#4B96F3",
+         "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+         "name" : "La Fromagerie",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 1536,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111621115844746274121\"\u003ePeter Foster\u003c/a\u003e"
+               ],
+               "photo_reference" : "Aap_uEBWrjzs8Pbi2if5DC3FpzZP9MEsY3OCevhk812t0b-J2QBEzsd72IIdTvkaoVvOlyYbNtC5FsdqVWtjJMG5uFO2ykimr__q42iCXkWNnhRRkXBWdEsnCp_TtXx1-gPpRhE5ocGA7tV8aJldYDArWzLY3r6cl8h-Zx3ObwhUWjqLtfV9",
+               "width" : 2048
+            }
+         ],
+         "place_id" : "ChIJQ_xyA9IadkgRgMIkd4-ZVxc",
+         "plus_code" : {
+            "compound_code" : "GR9X+X4 イギリス ロンドン",
+            "global_code" : "9C3XGR9X+X4"
+         },
+         "price_level" : 3,
+         "rating" : 4.5,
+         "reference" : "ChIJQ_xyA9IadkgRgMIkd4-ZVxc",
+         "scope" : "GOOGLE",
+         "types" : [
+            "meal_takeaway",
+            "cafe",
+            "restaurant",
+            "food",
+            "point_of_interest",
+            "store",
+            "establishment"
+         ],
+         "user_ratings_total" : 600,
+         "vicinity" : "2-6 Moxon Street, London"
+      }
+   ],
+}

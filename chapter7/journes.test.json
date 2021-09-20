@@ -1,0 +1,10 @@
+[
+    {
+        name: "Romantic",
+        journey: "park|bar|movie_theater|restaurant|florist"
+    },
+    {
+        name: "Shopping",
+        journey: "department_store|clothing_store|jewely_store"
+    }
+]
